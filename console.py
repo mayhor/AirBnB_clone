@@ -21,7 +21,7 @@ c_list = {"BaseModel": BaseModel,
               "Amenity": Amenity,
               "Place": Place,
               "Review": Review
-              }
+        }
 new_c_list = []
 for key in c_list:
     new_c_list.append(key)

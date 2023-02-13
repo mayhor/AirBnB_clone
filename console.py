@@ -15,13 +15,12 @@ from models.place import Place
 from models.review import Review
 
 c_list = {"BaseModel": BaseModel,
-              "User": User,
-              "State": State,
-              "City": City,
-              "Amenity": Amenity,
-              "Place": Place,
-              "Review": Review
-        }
+          "User": User,
+          "State": State,
+          "City": City,
+          "Amenity": Amenity,
+          "Place": Place,
+          "Review": Review}
 new_c_list = []
 for key in c_list:
     new_c_list.append(key)
@@ -29,8 +28,7 @@ commands = ["do_show",
             "do_destroy",
             "do_all",
             "do_update",
-            "do_count"
-            ]
+            "do_count"]
 
 
 class HBNBCommand(cmd.Cmd):
@@ -186,7 +184,7 @@ class HBNBCommand(cmd.Cmd):
             argument = argument + arg + " "
         try:
             eval('self.do_' + cmd + '(argument)')
-        except:
+        except Exception:
             print("** invalid command **")
 
 
